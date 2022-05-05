@@ -32,7 +32,7 @@ namespace EchoBot2.Bots
             //     replyText = $"圖片內容是: {ret.description.captions[0]}";
             //}
 
-            if (turnContext.Activity.Attachments.Count > 0)
+            if (turnContext.Activity.Attachments != null && turnContext.Activity.Attachments.Count > 0)
             {
                 var attachmentUrl = turnContext.Activity.Attachments[0].ContentUrl;
                 var httpClient = new HttpClient();
