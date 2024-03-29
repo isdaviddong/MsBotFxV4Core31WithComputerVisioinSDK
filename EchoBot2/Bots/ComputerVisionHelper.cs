@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
 using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace EchoBot2.Bots
 {
@@ -145,13 +146,25 @@ namespace EchoBot2.Bots
         //Upload Image to Imgur
         private static string UploadImage2Imgur(byte[] bytes)
         {
-            //建立 ImgurClient準備上傳圖片
-            var client = new Imgur.API.Authentication.Impl.ImgurClient("___06cb4ff2___", "_____054a2c25c99786bc265f3f25455aa_____");
-            var endpoint = new Imgur.API.Endpoints.Impl.ImageEndpoint(client);
-            Imgur.API.Models.IImage image;
-            //上傳Imgur
-            image = endpoint.UploadImageStreamAsync(new MemoryStream(bytes)).GetAwaiter().GetResult();
-            return image.Link;
+            var client = new HttpClient();
+            var clientId = "👉______clientId_____";
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Client-ID", clientId);
+
+            var content = new MultipartFormDataContent();
+            content.Add(new ByteArrayContent(bytes), "image");
+
+            var response = client.PostAsync("https://api.imgur.com/3/image", content).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var data = JsonConvert.DeserializeObject<dynamic>( response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine($"圖片上傳成功, 圖片網址: {data.data.link}");
+                return data.data.link;
+            }
+            else
+            {
+                Console.WriteLine("圖片上傳失敗");
+                return null;
+            }
         }
 
     }
