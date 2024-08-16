@@ -147,7 +147,7 @@ namespace EchoBot2.Bots
         private static string UploadImage2Imgur(byte[] bytes)
         {
             var client = new HttpClient();
-            var clientId = "👉______clientId_____";
+            var clientId = "👉__ImgurClientId_____"; //like 16axx15eb890ff4
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Client-ID", clientId);
 
             var content = new MultipartFormDataContent();

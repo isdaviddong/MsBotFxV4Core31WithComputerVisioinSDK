@@ -14,8 +14,8 @@ namespace EchoBot2.Bots
 {
     public class EchoBot : ActivityHandler
     {
-        static string endpoint = "https://southeastasia.api.cognitive.microsoft.com/";
-        static string subscriptionKey = "______5240bab67f2cb________";
+        static string endpoint = "https://👉___Computer_Vision_Endpoint___.cognitiveservices.azure.com/";
+        static string subscriptionKey = "👉___Computer_Vision_Key____";
 
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
@@ -48,7 +48,7 @@ namespace EchoBot2.Bots
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            var welcomeText = "Hello and welcome!";
+            var welcomeText = "請上傳圖片";
             foreach (var member in membersAdded)
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)
