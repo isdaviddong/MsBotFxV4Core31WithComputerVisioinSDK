@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EchoBot2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fdd2a6e8b3af727ed252eb9e10e870a5d5bef78")]
 [assembly: System.Reflection.AssemblyProductAttribute("EchoBot2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EchoBot2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

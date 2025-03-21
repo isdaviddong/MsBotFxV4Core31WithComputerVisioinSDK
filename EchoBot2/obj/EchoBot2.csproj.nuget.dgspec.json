@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test\\EchoBot2\\EchoBot2\\EchoBot2.csproj": {}
+    "D:\\xxx\\MsBotFxV4Core31WithComputerVisioinSDK\\EchoBot2\\EchoBot2.csproj": {}
   },
   "projects": {
-    "D:\\test\\EchoBot2\\EchoBot2\\EchoBot2.csproj": {
+    "D:\\xxx\\MsBotFxV4Core31WithComputerVisioinSDK\\EchoBot2\\EchoBot2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test\\EchoBot2\\EchoBot2\\EchoBot2.csproj",
+        "projectUniqueName": "D:\\xxx\\MsBotFxV4Core31WithComputerVisioinSDK\\EchoBot2\\EchoBot2.csproj",
         "projectName": "EchoBot2",
-        "projectPath": "D:\\test\\EchoBot2\\EchoBot2\\EchoBot2.csproj",
+        "projectPath": "D:\\xxx\\MsBotFxV4Core31WithComputerVisioinSDK\\EchoBot2\\EchoBot2.csproj",
         "packagesPath": "C:\\Users\\vmadmin\\.nuget\\packages\\",
-        "outputPath": "D:\\test\\EchoBot2\\EchoBot2\\obj\\",
+        "outputPath": "D:\\xxx\\MsBotFxV4Core31WithComputerVisioinSDK\\EchoBot2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,13 +21,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net8"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net8.0": {
+            "targetAlias": "net8",
             "projectReferences": {}
           }
         },
@@ -38,7 +39,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net8.0": {
+          "targetAlias": "net8",
           "dependencies": {
             "Imgur.API": {
               "target": "Package",
@@ -58,7 +60,7 @@
             },
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -67,7 +69,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
